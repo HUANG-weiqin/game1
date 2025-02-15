@@ -30,7 +30,7 @@ var MAP_GRASS2 = ground.new(2,Vector2(1,1),Vector2(2,1),Vector2(1,2),Vector2(0,1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-
+	
 func generateMap(w: int, h: int , pos = Vector2(0,0)) -> void:
 	for x in w:
 		for y in h:
@@ -42,11 +42,8 @@ func generateMap(w: int, h: int , pos = Vector2(0,0)) -> void:
 	for y in h:
 		set_cell(Vector2(pos.x, pos.y+y), MAP_GRASS.tileId, MAP_GRASS.left,0);
 		set_cell(Vector2(pos.x + w-1, pos.y+y), MAP_GRASS.tileId, MAP_GRASS.right,0);
+		
 	set_cell(Vector2(pos.x, pos.y), MAP_GRASS.tileId, MAP_GRASS.lu,0);
 	set_cell(Vector2(pos.x, pos.y + h-1), MAP_GRASS.tileId, MAP_GRASS.ld,0);
 	set_cell(Vector2(pos.x + w-1, pos.y), MAP_GRASS.tileId, MAP_GRASS.ru,0);
 	set_cell(Vector2(pos.x + w-1, pos.y + h-1), MAP_GRASS.tileId, MAP_GRASS.rd,0);
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

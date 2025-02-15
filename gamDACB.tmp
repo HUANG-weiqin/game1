@@ -120,15 +120,12 @@ script = ExtResource("7_uxngp")
 
 [node name="Sprite2D" type="Sprite2D" parent="pig"]
 texture = SubResource("AtlasTexture_h4i2o")
-offset = Vector2(8, 8)
-
-[node name="Camera2D" type="Camera2D" parent="pig"]
-position_smoothing_enabled = true
 
 [node name="mapManager" type="Node2D" parent="."]
 script = ExtResource("1_y5ueu")
 
 [node name="map" type="TileMapLayer" parent="mapManager"]
+position = Vector2(-61, -67)
 tile_set = SubResource("TileSet_wq4q6")
 script = ExtResource("6_2nhbu")
 
