@@ -47,3 +47,6 @@ func generateMap(w: int, h: int , pos = Vector2(0,0)) -> void:
 	set_cell(Vector2(pos.x, pos.y + h-1), MAP_GRASS.tileId, MAP_GRASS.ld,0);
 	set_cell(Vector2(pos.x + w-1, pos.y), MAP_GRASS.tileId, MAP_GRASS.ru,0);
 	set_cell(Vector2(pos.x + w-1, pos.y + h-1), MAP_GRASS.tileId, MAP_GRASS.rd,0);
+	
+func eraseMap(w:int, h:int, pos = Vector2(0,0)) -> void:
+	print ("erase",pos)

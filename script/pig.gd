@@ -28,7 +28,6 @@ func _process(delta: float) -> void:
 	
 
 func _input(event: InputEvent) -> void:
-	
 	var lr = Input.get_axis("ui_left", "ui_right")
 	var ud = Input.get_axis("ui_up", "ui_down") if lr==0 else 0;
 	var direction = Vector2( lr, ud)
