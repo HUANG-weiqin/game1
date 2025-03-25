@@ -1,13 +1,16 @@
 extends Node2D
 
-var MAP_BLOCK_SIZE = 10
-@onready var MAP = get_node("map")
+var MAP_BLOCK_SIZE = 6
+@onready var MAP = get_node("mapLayer")
 var CUR_CENTER = Vector2.ZERO
 var BLOCKS_LOADED = []
 
 func  _ready() -> void:
-	_updateMap(Vector2.ZERO)
-
+	genRandomMap()
+	
+func genRandomMap() -> void:
+	MAP.generateMap(9,7,CUR_CENTER);
+	
 func _updateMap(viewPos:Vector2)  -> void:
 	var viewBlockPos = Vector2(floor(viewPos.x / MAP_BLOCK_SIZE),floor(viewPos.y / MAP_BLOCK_SIZE))
 	
