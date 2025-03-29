@@ -33,4 +33,5 @@ func _input(event: InputEvent) -> void:
 	var direction = Vector2( lr, ud)
 	if direction:
 		move(direction.normalized() * stepLen);
+	
 		
